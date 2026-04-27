@@ -102,16 +102,63 @@
 	}
 
 	/*--/ Testimonials owl /--*/
-	$('#testimonial-mf').owlCarousel({
-		margin: 20,
-		autoplay: true,
-		autoplayTimeout: 4000,
-		autoplayHoverPause: true,
-		responsive: {
-			0: {
-				items: 1,
+	if ($('#testimonial-mf').length) {
+		$('#testimonial-mf').owlCarousel({
+			margin: 20,
+			autoplay: true,
+			autoplayTimeout: 5000,
+			autoplayHoverPause: true,
+			responsive: {
+				0: {
+					items: 1,
+				}
 			}
-		}
-	});
+		});
+	}
+
+	/*--/ Upcoming blog schedule /--*/
+	if ($('[data-post-schedule]').length) {
+		var scheduledPosts = [
+			{ date: '2026-05-11T09:00:00-04:00', title: 'Where AI Fits in Contractor Software Today', topic: 'AI · Operations · Product' },
+			{ date: '2026-05-25T09:00:00-04:00', title: 'What I Look For in New Engineering Tools', topic: 'Technology · Evaluation' },
+			{ date: '2026-06-08T09:00:00-04:00', title: 'The CTO Job Is Often a Clarity Job', topic: 'Leadership · CTO' },
+			{ date: '2026-06-22T09:00:00-04:00', title: 'What Prefabrication Software Gets Wrong', topic: 'Product · Manufacturing' }
+		];
+
+		var formatDate = function (isoDate) {
+			return new Date(isoDate).toLocaleString('en-US', {
+				weekday: 'long',
+				month: 'long',
+				day: 'numeric',
+				year: 'numeric',
+				hour: 'numeric',
+				minute: '2-digit'
+			});
+		};
+
+		var updateSchedule = function () {
+			var now = new Date();
+			var nextPost = scheduledPosts.find(function (post) {
+				return new Date(post.date) > now;
+			}) || scheduledPosts[scheduledPosts.length - 1];
+
+			$('[data-next-post-title]').text(nextPost.title);
+			$('[data-next-post-topic]').text(nextPost.topic);
+			$('[data-next-post-date]').text(formatDate(nextPost.date));
+
+			var diffMs = Math.max(new Date(nextPost.date) - now, 0);
+			var totalMinutes = Math.floor(diffMs / 60000);
+			var days = Math.floor(totalMinutes / 1440);
+			var hours = Math.floor((totalMinutes % 1440) / 60);
+			var minutes = totalMinutes % 60;
+
+			$('[data-countdown-days]').text(days);
+			$('[data-countdown-hours]').text(hours);
+			$('[data-countdown-minutes]').text(minutes);
+		};
+
+		updateSchedule();
+		window.setInterval(updateSchedule, 60000);
+	}
 
 })(jQuery);
