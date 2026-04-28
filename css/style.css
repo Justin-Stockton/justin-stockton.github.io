@@ -1545,6 +1545,27 @@ body.portfolio-body {
   color: #edf2ff;
 }
 
+.about-focus-grid,
+.contact-fit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+
+.about-focus-card,
+.contact-fit-card {
+  padding: 1.1rem 1.15rem;
+  border-radius: 20px;
+  background: rgba(30, 41, 59, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.about-focus-card p:last-child,
+.contact-fit-card p:last-child {
+  margin-bottom: 0;
+}
+
 .skill-chip-grid {
   display: flex;
   flex-wrap: wrap;
@@ -1710,8 +1731,28 @@ body.portfolio-body {
   color: #334155;
 }
 
+.contact-card .contact-copy {
+  color: #0f172a;
+  max-width: 42rem;
+}
+
+.contact-card .contact-copy-secondary {
+  color: #1e293b;
+  margin-bottom: 1.5rem;
+}
+
 .contact-card {
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(224, 231, 255, 0.92));
+}
+
+.contact-fit-card {
+  background: rgba(255, 255, 255, 0.72);
+  border-color: rgba(15, 23, 42, 0.08);
+}
+
+.contact-fit-card .title-s,
+.contact-fit-card p {
+  color: #0f172a;
 }
 
 .contact-actions-panel {
@@ -2131,6 +2172,8 @@ body.portfolio-body {
   }
 
   .about-info-grid,
+  .about-focus-grid,
+  .contact-fit-grid,
   .value-grid {
     grid-template-columns: 1fr;
   }
