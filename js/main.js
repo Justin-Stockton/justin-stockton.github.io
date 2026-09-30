@@ -140,8 +140,8 @@
 		},
 		{
 			date: '2026-03-28T09:00:00-04:00',
-			title: 'Staying Hands-On as a CTO',
-			topic: 'CTO · Engineering Management',
+			title: 'Staying Hands-On as a Principal Software Architect',
+			topic: 'Architecture · Engineering Management',
 			description: 'Technical proximity still matters in leadership. The challenge is knowing when hands-on involvement creates leverage and when it creates drag.',
 			href: '/blog/staying-hands-on-as-a-cto/'
 		},
@@ -168,8 +168,8 @@
 		},
 		{
 			date: '2026-06-08T09:00:00-04:00',
-			title: 'The CTO Job Is Often a Clarity Job',
-			topic: 'Leadership · CTO',
+			title: 'The Principal Software Architect Job Is Often a Clarity Job',
+			topic: 'Leadership · Architecture',
 			description: 'How technical leadership often creates the most value by reducing ambiguity, not by generating more motion.'
 		},
 		{

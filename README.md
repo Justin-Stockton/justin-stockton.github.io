@@ -4,13 +4,13 @@
 
 # Justin Stockton
 
-## 💻💼 CTO | Founding Engineer
+## 💻💼 Principal Software Architect | Founding Engineer
 
 I lead technology strategy and build software for serious contractor workflows.
 
 ## About Me
 
-- 💻💼 CTO and Founding Engineer at Safe Right Fast Technology, Inc.
+- 💻💼 Principal Software Architect and Founding Engineer at Safe Right Fast Technology, Inc.
 - ⚡ Build software for MEP contractors with a strong focus on electrical contractors
 - 🧠 Lead engineering, client strategy, product design, and software delivery
 - 🏗️ Build quality assurance, opportunity tracking, and prefabrication / manufacturing applications
