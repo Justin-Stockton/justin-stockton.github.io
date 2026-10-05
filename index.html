@@ -1,428 +1,124 @@
-<!DOCTYPE html>
+---
+---
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Justin Stockton | Principal Software Architect and Founding Engineer</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta
-      content="Justin Stockton portfolio featuring software architecture, contractor software experience, product thinking, and technical writing on engineering, AI, and technology trends."
-      name="description"
-    />
-
-    <link href="img/js-mark.svg" rel="icon" type="image/svg+xml" />
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon" />
-
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="lib/animate/animate.min.css" rel="stylesheet" />
-    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet" />
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet" />
-    <link href="css/style.css" rel="stylesheet" />
-  </head>
-
-  <body id="page-top" class="portfolio-body">
-    <nav
-      class="navbar navbar-b navbar-trans navbar-expand-md fixed-top"
-      id="mainNav"
-    >
-      <div class="container">
-        <a class="navbar-brand js-scroll brand-mark" href="#page-top" aria-label="Justin Stockton home">
-          <img src="img/js-mark.svg" alt="JS" class="brand-mark-image" />
-        </a>
-        <button
-          class="navbar-toggler collapsed"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarDefault"
-          aria-controls="navbarDefault"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <div
-          class="navbar-collapse collapse justify-content-end"
-          id="navbarDefault"
-        >
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link js-scroll active" href="#home">Home</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll" href="#work">Projects</a></li>
-            <li class="nav-item"><a class="nav-link" href="/blog/">Blog</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll" href="#testimonials">Testimonials</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll" href="#contact">Contact</a></li>
-          </ul>
-        </div>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Justin Stockton | Principal Software Architect and Founding Engineer</title>
+  <meta name="description" content="Justin Stockton's path from hospitality and ComputerCraft to building software for real contractor workflows.">
+  <link rel="canonical" href="https://justinstockton.me/">
+  <link href="/favicon.ico?v=2" rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64">
+  <link href="/img/favicon.svg?v=2" rel="icon" type="image/svg+xml" sizes="any">
+  <link href="/img/apple-touch-icon.png?v=2" rel="apple-touch-icon">
+  <link rel="stylesheet" href="/css/scrapbook.css">
+</head>
+<body class="scrap-story" data-concept="scrapbook-story">
+  <header class="ss-nav">
+    <a href="/">Justin Stockton</a>
+    <nav><a href="#path">My path</a><a href="#work">Things I made</a><a href="#tools">Toolbox</a><a href="#writing">Writing</a></nav>
+  </header>
+  <main>
+    <section class="ss-cover">
+      <div class="ss-cover-copy"><p>Not the usual path into software.</p><h1>Minecraft made me a founding engineer.</h1><h2>It started with Lua and a few ComputerCraft turtles.</h2></div>
+      <figure><img src="/img/pfp.jpg" alt="Justin Stockton"><figcaption><span>Founding engineer</span><span>Always tinkering</span><span>Bird-approved</span></figcaption></figure>
+      <div class="ss-story-board" aria-label="Career story chapters">
+        <a class="ss-board-note n1" href="#chapter-1"><small>01</small><strong>Software wasn't the plan yet</strong></a>
+        <a class="ss-board-note n2" href="#chapter-2"><small>02</small><strong>Operations under pressure</strong></a>
+        <a class="ss-board-note n3" href="#chapter-3"><small>03</small><strong>The Minecraft rabbit hole</strong></a>
+        <a class="ss-board-note n4" href="#chapter-4"><small>04</small><strong>Taking software seriously</strong></a>
+        <a class="ss-board-note n5" href="#chapter-5"><small>05</small><strong>Building around real workflows</strong></a>
+        <a class="ss-board-note n6" href="#chapter-6"><small>06</small><strong>Turning patterns into products</strong></a>
       </div>
-    </nav>
+      <a class="ss-scroll-cue" href="#path"><span>Follow my story</span><i aria-hidden="true"></i></a>
+    </section>
 
-    <header id="home" class="intro route bg-image hero-shell" style="background-image: url(img/banner.jpg)">
-      <div class="overlay-itro hero-overlay"></div>
-      <div class="intro-content display-table">
-        <div class="table-cell">
-          <div class="container">
-            <div class="row align-items-center hero-grid">
-              <div class="col-lg-7">
-                <div class="hero-copy">
-                  <p class="eyebrow">Principal Software Architect | Founding Engineer</p>
-                  <h1 class="intro-title mb-4">Justin Stockton leads technology strategy and builds software for serious contractor workflows.</h1>
-                  <p class="intro-subtitle hero-typed">
-                    <span class="text-slider-items">Software architecture,Contractor workflow software,AI and technology analysis,Full stack product design,Hands-on application development</span>
-                    <strong class="text-slider"></strong>
-                  </p>
-                  <p class="hero-summary">
-                    I am the Principal Software Architect and Founding Engineer at Safe Right Fast Tech, Inc., where I help MEP contractors, with a strong focus on electrical contractors, run better operations through purpose-built software.
-                  </p>
-                  <div class="hero-actions">
-                    <a class="btn btn-primary btn js-scroll px-4" href="#work" role="button">View Projects</a>
-                    <a class="btn btn-outline-light px-4" href="/blog/" role="button">Read the Blog</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-5">
-                <aside class="hero-card">
-                  <img src="img/pfp.jpg" alt="Portrait of Justin Stockton" class="hero-avatar" />
-                  <div class="hero-card-copy">
-                    <p class="hero-card-label">Based in Pittsburgh, PA</p>
-                    <ul class="hero-highlights ul-resect">
-                      <li>Principal Software Architect and Founding Engineer at Safe Right Fast Tech, Inc.</li>
-                      <li>Builds QA, opportunity tracking, and prefabrication apps</li>
-                      <li>Leads engineering, client strategy, product design, and delivery</li>
-                    </ul>
-                  </div>
-                </aside>
-              </div>
-            </div>
-          </div>
+    <section class="ss-path" id="path">
+      <article class="ss-chapter yellow reveal-section" id="chapter-1">
+        <span>01 / Software wasn't the plan yet</span>
+        <h2>I thought I was going into sports medicine.</h2>
+        <div class="ss-chapter-copy">
+          <p>I went to school for sports medicine because, at the time, that was the career I saw for myself. I was not circling software or working toward engineering.</p>
+          <p>My life moved in a different direction and took me into restaurants and hospitality. That was not a calculated step toward technology. It was simply what came next.</p>
         </div>
+      </article>
+      <article class="ss-chapter blue reveal-section" id="chapter-2">
+        <span>02 / Learning operations under pressure</span>
+        <h2>Then I learned how operations work when the pressure is real.</h2>
+        <div class="ss-chapter-copy">
+          <p>Before Chipotle, I ran a tap house and cigar bar. We closed the business at the start of the pandemic, and I went to Chipotle after that.</p>
+          <p>At Chipotle, I became a general manager and certified training manager (CTM), and I ran a training store. Staffing, training, customer expectations, speed, and quality all had to work at the same time. It was not enough for the process to work with an experienced team on a quiet day. We had to teach it clearly and make it hold up during a rush.</p>
+          <p>That was my real education in leadership and operations. I learned to listen to the people doing the work, communicate clearly, and pay attention to the handoffs where one missed detail created a much bigger problem.</p>
+          <p>That experience still affects how I evaluate software. If a tool only works when everything is calm and everyone remembers the process perfectly, it does not really work.</p>
+        </div>
+      </article>
+      <article class="ss-chapter cobalt reveal-section" id="chapter-3">
+        <span>03 / The Minecraft rabbit hole</span>
+        <h2>A game with friends is what made me fall in love with writing code.</h2>
+        <div class="ss-chapter-copy">
+          <p>I did not arrive at software through a formal career plan. I was playing Minecraft with friends and started experimenting with ComputerCraft. I wanted to understand how to write Lua programs for the turtles in the game.</p>
+          <p>I became obsessed with researching how it worked. I would read, try something, watch it fail, change the code, and run it again. Eventually I was writing programs the turtles could execute to gather materials and build things.</p>
+          <p>That feedback loop hooked me. I was not only using a system anymore. I could write a program, have a turtle execute it, and watch my code turn into something visible in the world. The more I learned, the more I wanted to know.</p>
+        </div>
+      </article>
+      <article class="ss-chapter neutral reveal-section" id="chapter-4">
+        <span>04 / Taking software seriously</span>
+        <h2>That curiosity eventually led me to App Academy.</h2>
+        <div class="ss-chapter-copy">
+          <p>I did not come into software through a computer science degree. I came in because writing Lua for Minecraft made me realize how much I enjoyed solving problems with code. App Academy was the point where I decided to take that curiosity seriously and learn how to become a software engineer.</p>
+          <p>I had to build the engineering foundation from the ground up. That meant writing a lot of code, getting stuck, debugging things I did not understand yet, and learning how to ask better questions.</p>
+          <p>The early public projects below were not just portfolio pieces. They were where I learned the difference between code that runs and a product another person can actually use. I started caring as much about the flow, feedback, and tradeoffs as I did about getting the feature finished.</p>
+        </div>
+      </article>
+      <article class="ss-chapter sage reveal-section" id="chapter-5">
+        <span>05 / Building around real workflows</span>
+        <h2>I started building around real customer workflows.</h2>
+        <div class="ss-chapter-copy">
+          <p>Custom software was where the engineering work connected back to operations. Customers rarely arrived with a clean specification. They arrived with a spreadsheet, a workaround, a repeated frustration, or a process that depended too heavily on one person knowing how everything worked.</p>
+          <p>My job became more than implementing the request. I needed to understand what was getting stuck, which part should be simplified, and which details were specific for a good reason. That pulled me deeper into discovery, product design, client strategy, and architecture.</p>
+          <p>This was the point where my earlier experience stopped feeling unrelated. The hospitality background helped me hear the operational problem behind the feature request.</p>
+        </div>
+      </article>
+      <article class="ss-chapter pink reveal-section" id="chapter-6">
+        <span>06 / Turning patterns into products</span>
+        <h2>Now I am turning those lessons into products that can scale.</h2>
+        <div class="ss-chapter-copy">
+          <p>My current role takes the same kind of operational problems and asks a harder question: how do we build a SaaS product that works across customers without flattening the parts of their business that actually matter?</p>
+          <p>At Safe Right Fast Tech, I lead technology strategy and help build SaaS solutions for MEP contractors. That includes quality assurance, opportunity tracking, prefabrication, and manufacturing workflows. I work across client conversations, product direction, architecture, engineering leadership, and implementation.</p>
+          <p>I still want to stay close to the code because it keeps the strategy honest. I also want to stay close to the customer because technically clean software can still solve the wrong problem.</p>
+          <blockquote>Good SaaS should preserve what is specific about the work without making every customer start from scratch.</blockquote>
+        </div>
+      </article>
+    </section>
+
+    <section class="ss-work reveal-section" id="work">
+      <h2>Things I made along the way</h2>
+      <div class="ss-projects">
+        <a href="https://nextspot.justinstockton.me/"><img src="/img/Nextspot.png" alt="Next Spot"><strong>Next Spot</strong><span>Travel discovery · 2022</span></a>
+        <a href="https://stakr.justinstockton.me/"><img src="/img/stakr.png" alt="Stakr"><strong>Stakr</strong><span>Full-stack application · 2022</span></a>
+        <a href="https://pokehunt.justinstockton.me/"><img src="/img/Pokehunt.png" alt="Pokehunt"><strong>Pokehunt</strong><span>Playful front end · 2022</span></a>
+        <div><strong>Current contractor work</strong><p>The client work is private. I am building the case studies around approved problems, decisions, and outcomes instead of pretending the details are public.</p></div>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section id="about" class="about-mf sect-pt4 route section-block">
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-kicker">About</p>
-            <h2>Engineering with empathy, speed, and follow-through.</h2>
-          </div>
-          <div class="row align-items-stretch">
-            <div class="col-lg-6 mb-4 mb-lg-0">
-              <div class="box-shadow-full about-panel h-100">
-                <div class="about-info-grid">
-                  <div>
-                    <p class="title-s">Name</p>
-                    <p>Justin Stockton</p>
-                  </div>
-                  <div>
-                    <p class="title-s">Role</p>
-                    <p>Principal Software Architect | Founding Engineer</p>
-                  </div>
-                  <div>
-                    <p class="title-s">Company</p>
-                    <p>Safe Right Fast Technology, Inc.</p>
-                  </div>
-                  <div>
-                    <p class="title-s">Email</p>
-                    <p><a href="mailto:justinstockton67@gmail.com">justinstockton67@gmail.com</a></p>
-                  </div>
-                  <div>
-                    <p class="title-s">Phone</p>
-                    <p><a href="tel:17575090282">(757) 509-0282</a></p>
-                  </div>
-                </div>
-                <p class="about-lead">
-                  I lead technology strategy at Safe Right Fast Tech, Inc. while still staying close to the work: shaping product direction, meeting with clients, designing applications, and writing production software.
-                </p>
-                <p>
-                  Our team builds quality assurance apps, opportunity tracking apps, and prefabrication and manufacturing apps for MEP contractors, especially electrical contractors. That work keeps me close to operational detail, customer context, and the kind of product decisions that only become obvious when you understand how the work is actually getting done.
-                </p>
-                <p>
-                  I also write about AI, technology trends, and new tools that might change how teams build software and run operations. My background in hospitality still shows up in how I operate: listen closely, communicate clearly, and build tools that solve real operational problems.
-                </p>
-                <div class="about-focus-grid">
-                  <div class="about-focus-card">
-                    <p class="title-s">What I Lead</p>
-                    <p>Technology strategy, engineering direction, client discovery, and product execution.</p>
-                  </div>
-                  <div class="about-focus-card">
-                    <p class="title-s">What I Build</p>
-                    <p>Software for quality, pipeline visibility, prefabrication workflows, and contractor operations.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="box-shadow-full skills-panel h-100">
-                <p class="title-s">Core Stack</p>
-                <div class="skill-chip-grid">
-                  <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" />TypeScript</span>
-                  <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />JavaScript</span>
-                  <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg" alt="Python" />Python</span>
-                  <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="React" />React</span>
-                  <span class="skill-chip skill-chip-text">Zustand</span>
-                  <span class="skill-chip skill-chip-text">TanStack</span>
-                  <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" alt="Redux" />Redux</span>
-                  <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />Node.js</span>
-                  <span class="skill-chip skill-chip-text">Hono</span>
-                  <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" />Express</span>
-                  <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" />Flask</span>
-                  <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original-wordmark.svg" alt="SQLAlchemy" />SQLAlchemy</span>
-                  <span class="skill-chip skill-chip-text">Deno</span>
-                  <span class="skill-chip skill-chip-text">Bun</span>
-                  <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" alt="Go" />Go</span>
-                  <span class="skill-chip skill-chip-text">Fastify</span>
-                  <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg" alt="Rust" />Rust</span>
-                  <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" />PostgreSQL</span>
-                  <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" alt="MySQL" />MySQL</span>
-                  <span class="skill-chip skill-chip-text">Quickbase</span>
-                  <span class="skill-chip skill-chip-text">pnpm</span>
-                  <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-plain.svg" alt="Docker" />Docker</span>
-                  <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS" />CSS</span>
-                  <span class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML" />HTML</span>
-                </div>
-                <div class="value-grid">
-                  <div class="value-card">
-                    <h3>Product and Client Leadership</h3>
-                    <p>I translate contractor workflows into software by combining discovery, client-facing meetings, and application design.</p>
-                  </div>
-                  <div class="value-card">
-                    <h3>Hands-On Engineering</h3>
-                    <p>I oversee engineers and delivery, while still contributing directly to architecture, implementation, and product quality.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="work" class="portfolio-mf sect-pt4 route section-block section-dark">
-        <div class="container">
-          <div class="section-heading centered">
-            <p class="section-kicker">Selected Work</p>
-            <h2>Projects that show how I think and build.</h2>
-            <p class="section-copy">A few recent applications spanning front-end interaction, API work, and full stack product delivery.</p>
-          </div>
-          <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
-              <article class="work-box project-card h-100">
-                <a href="https://nextspot.justinstockton.me/" target="_blank" rel="noopener noreferrer">
-                  <div class="work-img project-image-wrap">
-                    <img src="img/Nextspot.png" alt="Screenshot of Next Spot" class="img-fluid project-image" />
-                  </div>
-                  <div class="work-content project-content">
-                    <p class="project-tag">Web Application</p>
-                    <h3 class="w-title">Next Spot</h3>
-                    <p class="project-description">A project centered on helping users discover and plan their next destination with a smoother browsing experience.</p>
-                    <div class="w-more project-meta">
-                      <span class="w-ctegory">Full Stack</span>
-                      <span class="w-date">Aug 2022</span>
-                    </div>
-                  </div>
-                </a>
-              </article>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <article class="work-box project-card h-100">
-                <a href="https://stakr.justinstockton.me/" target="_blank" rel="noopener noreferrer">
-                  <div class="work-img project-image-wrap">
-                    <img src="img/stakr.png" alt="Screenshot of Stakr" class="img-fluid project-image" />
-                  </div>
-                  <div class="work-content project-content">
-                    <p class="project-tag">Web Application</p>
-                    <h3 class="w-title">Stakr</h3>
-                    <p class="project-description">A stack-focused product experience built to organize content in a way that feels approachable and efficient.</p>
-                    <div class="w-more project-meta">
-                      <span class="w-ctegory">Full Stack</span>
-                      <span class="w-date">Aug 2022</span>
-                    </div>
-                  </div>
-                </a>
-              </article>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <article class="work-box project-card h-100">
-                <a href="https://pokehunt.justinstockton.me/" target="_blank" rel="noopener noreferrer">
-                  <div class="work-img project-image-wrap">
-                    <img src="img/Pokehunt.png" alt="Screenshot of Pokehunt" class="img-fluid project-image" />
-                  </div>
-                  <div class="work-content project-content">
-                    <p class="project-tag">Web Application</p>
-                    <h3 class="w-title">Pokehunt</h3>
-                    <p class="project-description">A playful build that combines strong visual feedback with an interactive front-end browsing flow.</p>
-                    <div class="w-more project-meta">
-                      <span class="w-ctegory">Full Stack</span>
-                      <span class="w-date">Jul 2022</span>
-                    </div>
-                  </div>
-                </a>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="blog" class="section-block blog-preview-section">
-        <div class="container">
-          <div class="section-heading">
-            <p class="section-kicker">Writing</p>
-            <h2>Weekly notes on engineering leadership, AI, technology trends, and contractor software.</h2>
-            <p class="section-copy blog-section-copy">
-              I am using this blog to document what I am learning while leading technology, building software, evaluating AI and new tools, and working closely with clients in construction-focused product environments.
-            </p>
-          </div>
-          <div class="row" data-blog-preview-list></div>
-          <div class="blog-schedule-card" data-post-schedule>
-            <div class="row align-items-center">
-              <div class="col-lg-4 mb-4 mb-lg-0">
-                <p class="blog-meta">Biweekly Monday Schedule</p>
-                <h3 class="schedule-title">Next post countdown</h3>
-                <p class="schedule-copy">
-                  New writing goes live every other Monday. The next topic is already queued up.
-                </p>
-              </div>
-              <div class="col-lg-4 mb-4 mb-lg-0">
-                <p class="schedule-label">Next title</p>
-                <h4 class="schedule-post-title" data-next-post-title>Loading next post...</h4>
-                <p class="schedule-post-topic" data-next-post-topic></p>
-              </div>
-              <div class="col-lg-4">
-                <div class="schedule-countdown-grid">
-                  <div class="schedule-countdown-unit">
-                    <span data-countdown-days>0</span>
-                    <small>Days</small>
-                  </div>
-                  <div class="schedule-countdown-unit">
-                    <span data-countdown-hours>0</span>
-                    <small>Hours</small>
-                  </div>
-                  <div class="schedule-countdown-unit">
-                    <span data-countdown-minutes>0</span>
-                    <small>Minutes</small>
-                  </div>
-                </div>
-                <p class="schedule-date" data-next-post-date></p>
-              </div>
-            </div>
-          </div>
-          <div class="blog-section-action">
-            <a class="contact-action primary blog-cta" href="/blog/">Browse All Posts</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="testimonials" class="section-block testimonial-section">
-        <div class="container">
-          <div class="section-heading centered">
-            <p class="section-kicker">Testimonials</p>
-            <h2>People remember the code and the collaboration.</h2>
-          </div>
-          <div id="testimonial-mf" class="owl-carousel owl-theme testimonial-carousel">
-            <div class="testimonial-box revamped-testimonial">
-              <div class="author-test">
-                <img src="img/bflores.jpg" alt="Brandon Flores" class="rounded-circle b-shadow-a testimonial-avatar" />
-                <span class="author">Brandon Flores</span>
-              </div>
-              <div class="content-test">
-                <p class="description lead">
-                  Throughout the curriculum at App Academy, Justin was always there to give his helpful insight to anyone in need. I specifically requested him for our Python group project because I knew he would put in 110%. Whether it's through his group projects or studies, Justin always seems to be leaving his mark and spreading positivity, lifting the team morale.
-                </p>
-                <span class="comit"><i class="fa fa-quote-right"></i></span>
-              </div>
-            </div>
-            <div class="testimonial-box revamped-testimonial">
-              <div class="author-test">
-                <img src="img/testimonial-1.jpg" alt="Josef Niels Griedel" class="rounded-circle b-shadow-a testimonial-avatar" />
-                <span class="author">Josef Niels Griedel</span>
-              </div>
-              <div class="content-test">
-                <p class="description lead">
-                  Whenever I or others were up late studying in the Discord chat rooms, Justin would always pop in to check on us and help. Rather than brag about his grasp of the material, he consistently shared his knowledge with everyone and made people feel supported.
-                </p>
-                <span class="comit"><i class="fa fa-quote-right"></i></span>
-              </div>
-            </div>
-            <div class="testimonial-box revamped-testimonial">
-              <div class="author-test">
-                <img src="img/testimonial-3.png" alt="David Rivera Rocha" class="rounded-circle b-shadow-a testimonial-avatar" />
-                <span class="author">David Rivera Rocha</span>
-              </div>
-              <div class="content-test">
-                <p class="description lead">
-                  Justin proved time and time again that he is the type of person who sets a goal and works hard to achieve it. He completed App Academy without prior coding knowledge, tutored other students regularly, and showed the kind of dedication and care every team wants.
-                </p>
-                <span class="comit"><i class="fa fa-quote-right"></i></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section-block contact-section">
-        <div class="container">
-          <div class="box-shadow-full contact-card">
-            <div class="row align-items-center">
-              <div class="col-lg-7 mb-4 mb-lg-0">
-                <p class="section-kicker">Contact</p>
-                <h2 class="contact-title">If you need an engineer who cares about the product and the people building it, let's talk.</h2>
-                <p class="contact-copy">
-                  I am always open to interesting product work, engineering opportunities, and conversations with teams that value ownership, collaboration, and practical execution.
-                </p>
-                <p class="contact-copy contact-copy-secondary">
-                  If you are building software for operational teams, trying to turn messy workflows into better products, or want a technology leader who still likes being close to the work, I would be glad to connect.
-                </p>
-                <ul class="list-ico contact-list">
-                  <li><span class="ion-ios-location"></span>Pittsburgh, PA</li>
-                  <li><span class="ion-ios-telephone"></span><a href="tel:17575090282">(757) 509-0282</a></li>
-                  <li><span class="ion-email"></span><a href="mailto:justinstockton67@gmail.com">justinstockton67@gmail.com</a></li>
-                </ul>
-                <div class="contact-fit-grid">
-                  <div class="contact-fit-card">
-                    <p class="title-s">Best Fit</p>
-                    <p>Product-minded engineering leadership, contractor software, platform work, and AI-informed delivery.</p>
-                  </div>
-                  <div class="contact-fit-card">
-                    <p class="title-s">Open To</p>
-                    <p>Advisory conversations, leadership roles, hands-on product work, and strong technical teams.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-5">
-                <div class="contact-actions-panel">
-                  <a class="contact-action primary" href="mailto:justinstockton67@gmail.com"><i class="fa fa-envelope"></i><span>Email Me</span></a>
-                  <a class="contact-action" href="https://www.linkedin.com/in/justin-stockton-101a38a4/" target="_blank" rel="noopener noreferrer"><i class="fa fa-linkedin"></i><span>LinkedIn</span></a>
-                  <a class="contact-action" href="https://www.github.com/Justin-Stockton" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i><span>GitHub</span></a>
-                  <a class="contact-action" href="https://angel.co/u/justin-stockton-1" target="_blank" rel="noopener noreferrer"><i class="fa fa-angellist"></i><span>AngelList</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container">
-        <p>Built for clarity, speed, and a better first impression.</p>
+    <section class="ss-tools reveal-section" id="tools">
+      <header><p>Toolbox</p><h2>The tools I reach for most</h2><div>A focused set of technologies that show up most often in my work.</div></header>
+      <div class="ss-toolbox">
+        <span class="ss-tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="" loading="lazy">TypeScript</span>
+        <span class="ss-tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg" alt="" loading="lazy">Go</span>
+        <span class="ss-tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="" loading="lazy">Python</span>
+        <span class="ss-tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="" loading="lazy">React</span>
+        <span class="ss-tool"><img src="https://cdn.jsdelivr.net/npm/simple-icons/icons/tanstack.svg" alt="" loading="lazy">TanStack</span>
+        <span class="ss-tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="" loading="lazy">Node.js</span>
+        <span class="ss-tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="" loading="lazy">PostgreSQL</span>
+        <span class="ss-tool"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="" loading="lazy">Docker</span>
       </div>
-    </footer>
+    </section>
 
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-    <div id="preloader"></div>
-
-    <script src="lib/jquery/jquery.min.js"></script>
-    <script src="lib/jquery/jquery-migrate.min.js"></script>
-    <script src="lib/popper/popper.min.js"></script>
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/counterup/jquery.waypoints.min.js"></script>
-    <script src="lib/counterup/jquery.counterup.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="lib/typed/typed.min.js"></script>
-    <script src="js/main.js"></script>
-  </body>
-</html>
+    <section class="ss-writing reveal-section" id="writing">
+      <header><p>Writing</p><h2>Writing is under renovation.</h2><div>I'm rebuilding this part of the site. New articles on software architecture, system design, and data structures and algorithms are coming soon.</div></header>
+      <a class="ss-all-writing" href="/blog/">What's coming &rarr;</a>
+    </section>
+    <section class="ss-end reveal-section" id="contact"><p>I am based in Pittsburgh and always open to talking about software, operations, the latest tech trends, or whatever tool just dropped that everyone is arguing about this week.</p><a href="mailto:hello@justinstockton.me">hello@justinstockton.me</a></section>
+  </main><script src="/js/scrapbook.js"></script>
+</body></html>

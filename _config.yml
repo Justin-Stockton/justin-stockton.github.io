@@ -1,0 +1,20 @@
+title: Justin Stockton
+url: https://justinstockton.me
+description: Software, operations, and technical leadership from Justin Stockton.
+permalink: pretty
+buttondown_username: ""
+plugins:
+  - jekyll-feed
+feed:
+  path: feed.xml
+exclude:
+  - preview
+  - _drafts
+  - _archive
+  - PORTFOLIO_REVIEW.md
+  - README.md
+  - blog/BACKLOG.md
+  - blog/DRAFT_REVIEW_CHECKLIST.md
+  - blog/EDITORIAL_REFRAME.md
+  - blog/README.md
+  - blog/WRITING_GUIDE.md

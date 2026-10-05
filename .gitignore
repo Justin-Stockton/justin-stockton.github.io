@@ -1,0 +1,12 @@
+_site/
+.jekyll-cache/
+.sass-cache/
+_drafts/
+_archive/
+preview/
+PORTFOLIO_REVIEW.md
+blog/BACKLOG.md
+blog/DRAFT_REVIEW_CHECKLIST.md
+blog/EDITORIAL_REFRAME.md
+blog/README.md
+blog/WRITING_GUIDE.md
