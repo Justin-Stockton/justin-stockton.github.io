@@ -161,4 +161,4 @@ Either approach still needs event identity, ordering rules, consumer idempotency
 This model does not run PostgreSQL, a broker, multiple relay workers, process failure, or a durable consumer. The list named `broker` is only a visible duplicate counter. It supports the decision at the database boundary: record publication intent in the same commit, then choose a table relay or CDC based on the infrastructure and event contract actually available.
 
 
-Download the [complete runnable example](/blog/examples/transactional-outbox.zip), extract it, and run `python3 main.py` inside the extracted directory. The download includes the checks used for this walkthrough.
+Download the [complete runnable example](/blog/examples/transactional-outbox.zip?v=2), extract it, and run `python3 main.py` inside the extracted directory. The download includes the checks used for this walkthrough.
