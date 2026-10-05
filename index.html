@@ -11,7 +11,7 @@
   <link href="/favicon.ico?v=2" rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64">
   <link href="/img/favicon.svg?v=2" rel="icon" type="image/svg+xml" sizes="any">
   <link href="/img/apple-touch-icon.png?v=2" rel="apple-touch-icon">
-  <link rel="stylesheet" href="/css/scrapbook.css">
+  <link rel="stylesheet" href="/css/scrapbook.css?v=writing-1">
 </head>
 <body class="scrap-story" data-concept="scrapbook-story">
   <header class="ss-nav">
@@ -116,8 +116,15 @@
     </section>
 
     <section class="ss-writing reveal-section" id="writing">
-      <header><p>Writing</p><h2>Writing is under renovation.</h2><div>I'm rebuilding this part of the site. New articles on software architecture, system design, and data structures and algorithms are coming soon.</div></header>
-      <a class="ss-all-writing" href="/blog/">What's coming &rarr;</a>
+      <header><p>Writing</p><h2>Notes from the work.</h2><div>I write about the tools I use, the changes I make, and the decisions behind software.</div></header>
+      {% assign published_posts = site.posts | where_exp: "post", "post.draft != true" | sort: "publish_order" %}
+      <div class="ss-post-list">
+        {% for post in published_posts limit: 3 %}
+        {% assign post_words = post.content | number_of_words %}{% assign post_minutes = post_words | plus: 199 | divided_by: 200 %}
+        <a class="ss-post c{{ forloop.index0 }}" href="{{ post.url }}"><span>{{ post.topic | escape }}</span><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %-d, %Y" }}<em>{{ post_minutes }} min read</em></time><h3>{{ post.title | escape }}</h3><p>{{ post.deck | escape }}</p></a>
+        {% endfor %}
+      </div>
+      <a class="ss-all-writing" href="/blog/">Read all writing &rarr;</a>
     </section>
     <section class="ss-end reveal-section" id="contact"><p>I am based in Pittsburgh and always open to talking about software, operations, the latest tech trends, or whatever tool just dropped that everyone is arguing about this week.</p><!--email_off--><a href="mailto:hello@justinstockton.me">hello@justinstockton.me</a><!--/email_off--></section>
   </main><script src="/js/scrapbook.js"></script>

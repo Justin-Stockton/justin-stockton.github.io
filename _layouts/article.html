@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>{{ page.title | escape }} | Justin Stockton</title>
+  <meta name="description" content="{{ page.description | escape }}">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ page.title | escape }}">
+  <meta property="og:description" content="{{ page.description | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ '/img/pfp.jpg' | absolute_url }}">
+  <meta property="og:site_name" content="Justin Stockton">
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ page.title | escape }}">
+  <meta name="twitter:description" content="{{ page.description | escape }}">
+  <meta name="twitter:image" content="{{ '/img/pfp.jpg' | absolute_url }}">
+  <link href="/feed.xml" rel="alternate" type="application/atom+xml" title="Justin Stockton">
+  <link href="/favicon.ico?v=2" rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64">
+  <link href="/img/favicon.svg?v=2" rel="icon" type="image/svg+xml" sizes="any">
+  <link href="/img/apple-touch-icon.png?v=2" rel="apple-touch-icon">
+  <link rel="stylesheet" href="/css/scrapbook.css?v=writing-1">
+  <link rel="stylesheet" href="/css/code.css">
+  {% if page.visual_pilot %}<link rel="stylesheet" href="/css/article-visuals.css">{% endif %}
+</head>
+<body class="scrap-story">
+  <header class="ss-nav">
+    <a href="/">Justin Stockton</a>
+    <nav aria-label="Main navigation"><a href="/">Home</a><a href="/blog/">Writing</a><a href="/#work">Projects</a><a href="/#contact">Contact</a></nav>
+  </header>
+  <main data-post-view>
+    {% assign title_words = page.title | split: " " %}
+    {% assign title_last_index = title_words.size | minus: 1 %}
+    {% assign deck_delay = title_last_index | times: 85 | plus: 1020 %}
+    {% assign words = content | number_of_words %}
+    {% assign minutes = words | plus: 199 | divided_by: 200 %}
+    <article class="draft-article">
+      <a class="article-back" href="/blog/">&larr; Back to writing</a>
+      <header>
+        <p>{{ page.date | date: "%b %-d, %Y" }} &middot; <span data-reading-minutes="{{ minutes }}">{{ minutes }} min read</span> &middot; {{ page.topic | escape }}</p>
+        <h1{% if title_words.size > 8 %} class="article-title-long"{% endif %}>{% for word in title_words %}<span class="article-title-word" style="animation-delay:{{ forloop.index0 | times: 85 | plus: 320 }}ms">{{ word | escape }}</span>{% unless forloop.last %}&#32;{% endunless %}{% endfor %}</h1>
+        <div class="article-deck" style="animation-delay:{{ deck_delay }}ms">{{ page.deck | escape }}</div>
+        <a class="article-scroll-cue" href="#article-body"><span>Continue reading</span><i aria-hidden="true"></i></a>
+      </header>
+      <div class="article-reading-layout">
+        <aside class="article-map" data-article-map hidden>
+          <button class="article-map-toggle" type="button" data-article-map-toggle aria-expanded="false"><span>Article map</span><b data-article-map-current></b></button>
+          <nav aria-label="Article sections"><ol data-article-map-list></ol></nav>
+        </aside>
+        <div class="article-body" id="article-body">{{ content }}</div>
+      </div>
+    </article>
+  </main>
+  <footer class="ss-end">
+    <p>More notes from the work.</p>
+    <a href="/blog/">Browse the writing</a> &middot; <a href="/feed.xml">Subscribe with RSS</a>
+    <div><!--email_off--><a href="mailto:hello@justinstockton.me">hello@justinstockton.me</a><!--/email_off--></div>
+  </footer>
+  <script src="/js/published-article-map.js"></script>
+  <script src="/js/article-code.js"></script>
+</body>
+</html>

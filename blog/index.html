@@ -5,13 +5,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Writing under renovation | Justin Stockton</title>
-  <meta name="description" content="Justin Stockton's writing is under renovation. New articles on software architecture, system design, and data structures and algorithms are coming soon.">
+  <title>Writing | Justin Stockton</title>
+  <meta name="description" content="Personal notes on developer tools, coding agents, and software architecture, with runnable system-design examples.">
   <link rel="canonical" href="https://justinstockton.me/blog/">
+  <link href="/feed.xml" rel="alternate" type="application/atom+xml" title="Justin Stockton">
   <link href="/favicon.ico?v=2" rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48 64x64">
   <link href="/img/favicon.svg?v=2" rel="icon" type="image/svg+xml" sizes="any">
   <link href="/img/apple-touch-icon.png?v=2" rel="apple-touch-icon">
-  <link rel="stylesheet" href="/css/scrapbook.css">
+  <link rel="stylesheet" href="/css/scrapbook.css?v=writing-1">
+  <link rel="stylesheet" href="/css/article-browser.css">
 </head>
 <body class="scrap-story ss-blog-page">
   <header class="ss-nav">
@@ -20,17 +22,39 @@
   </header>
   <main>
     <header class="ss-blog-hero">
-      <p>Writing</p>
-      <h1>Writing is under renovation.</h1>
-      <div>
-        <p>I'm rebuilding this part of the site. New articles on software architecture, system design, and data structures and algorithms are coming soon.</p>
-        <p>In the meantime, you can <a href="/#work">take a look at my projects</a> or <!--email_off--><a href="mailto:hello@justinstockton.me">get in touch</a><!--/email_off-->.</p>
-      </div>
+      <p>Writing</p><h1>Notes from the work.</h1>
+      <div>I write about the tools I use, the changes I make, and the decisions behind software. The system-design walkthroughs use synthetic examples you can run yourself.</div>
     </header>
+    <form id="article-controls" class="article-controls" role="search" hidden>
+      <label class="article-query" for="article-query">Search articles<input id="article-query" name="q" type="search" placeholder="Title, summary, or topic"></label>
+      <label for="article-topic">Topic<select id="article-topic" name="topic"><option value="">All topics</option><option>Developer tools</option><option>AI and tools</option><option>System design</option></select></label>
+      <label for="article-lane">Reading lane<select id="article-lane" name="lane"><option value="">All articles</option><option value="personal">Personal perspectives</option><option value="generalized">System design</option></select></label>
+      <button type="reset">Clear filters</button>
+      <p id="article-count" role="status" aria-live="polite"></p>
+    </form>
+    <nav data-reading-sections aria-label="Reading sections"><p><a href="#personal">Personal perspectives</a> &middot; <a href="#generalized">System design</a></p></nav>
+    <p id="article-empty" class="article-empty" hidden>No articles match. Try another search or clear the filters.</p>
+    {% assign published_posts = site.posts | where_exp: "post", "post.draft != true" | sort: "publish_order" %}
+    <div id="article-results">
+      {% assign groups = "personal,generalized" | split: "," %}
+      {% for group in groups %}
+      <section class="ss-blog-section" id="{{ group }}">
+        <header><h2>{% if group == "personal" %}Personal perspectives{% else %}System design{% endif %}</h2></header>
+        <div class="ss-published-list">
+          {% for post in published_posts %}{% if post.reading_lane == group %}
+          {% assign post_words = post.content | number_of_words %}{% assign post_minutes = post_words | plus: 199 | divided_by: 200 %}
+          {% capture search_text %}{{ post.title }} {{ post.description }} {{ post.deck }} {{ post.topic }}{% endcapture %}
+          <a href="{{ post.url }}" data-article data-topic="{{ post.topic | escape }}" data-lane="{{ post.reading_lane }}" data-search="{{ search_text | strip | escape }}">
+            <small>{{ post.topic | escape }}</small><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%b %-d, %Y" }}<em>{{ post_minutes }} min read</em></time>
+            <strong>{{ post.title | escape }}</strong><p>{{ post.deck | escape }}</p>
+          </a>
+          {% endif %}{% endfor %}
+        </div>
+      </section>
+      {% endfor %}
+    </div>
   </main>
-  <footer class="ss-end">
-    <p>Want to talk about software or operations?</p>
-    <!--email_off--><a href="mailto:hello@justinstockton.me">hello@justinstockton.me</a><!--/email_off-->
-  </footer>
+  <footer class="ss-end"><p>Want to talk about software or operations?</p><a href="/feed.xml">Subscribe with RSS</a><br><!--email_off--><a href="mailto:hello@justinstockton.me">hello@justinstockton.me</a><!--/email_off--></footer>
+  <script src="/js/article-browser.js"></script>
 </body>
 </html>

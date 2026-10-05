@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 392" role="img" aria-labelledby="outbox-retry-title outbox-retry-desc">
+<title id="outbox-retry-title">Failure after publish creates a retry</title>
+<desc id="outbox-retry-desc">The local model publishes event 101, fails before updating its completion flag, and publishes the same event again on the next relay call.</desc>
+<defs><style>/* Diagram palette follows the existing scrapbook preview, not a new theme. */
+.visual-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 1.5rem; margin: 2rem 0; }
+{ margin: 0; min-width: 0; padding: 1rem 0; border-top: 2px solid var(--ss-ink, #19242d); }
+svg, img { display: block; width: 100%; max-width: 360px; height: auto; margin: 0 auto; overflow: visible; }
+figcaption { margin: .8rem 0 0; font: 1rem/1.55 Arial, sans-serif; color: var(--ss-ink, #19242d); }
+figcaption strong { display: block; margin-bottom: .35rem; }
+.visual-facts { font: .9rem/1.5 Arial, sans-serif !important; margin: .5rem 0 !important; }
+.v-node { fill: var(--ss-card, #faf8f3); stroke: #657780; stroke-width: 1.5; }
+.v-focus { fill: #f2dfd6; stroke: var(--ss-accent, #b75f49); stroke-width: 2; }
+.v-boundary { fill: none; stroke: #657780; stroke-width: 1.5; stroke-dasharray: 4 4; }
+.v-link { fill: none; stroke: #657780; stroke-width: 1.5; }
+.v-label { fill: var(--ss-ink, #19242d); font: 16px Arial, sans-serif; }
+.v-heading { fill: var(--ss-ink, #19242d); font: bold 16px Arial, sans-serif; }
+.v-index { fill: #4a5a64; font: 16px ui-monospace, monospace; }
+.v-value { fill: var(--ss-ink, #19242d); font: 24px ui-monospace, monospace; }
+.v-mask { fill: var(--ss-paper, #f1eee8); }
+.visual-wide { max-width: 440px; }
+.bat-code-figure { margin: 2rem 0; min-width: 0; }
+.bat-code-view { max-width: 100%; overflow-x: auto; background: #1e1e2e; border-radius: .4rem; }
+.bat-code-view img { display: block; width: 875px; max-width: none; height: auto; }
+.bat-code-view:focus-visible { outline: 3px solid #cba6f7; outline-offset: 3px; }
+.bat-code-figure figcaption { margin-top: .7rem; font: .9rem/1.5 Arial, sans-serif; }
+.bat-selectable-code { margin: 1rem 0 2rem; }
+.bat-selectable-code summary { cursor: pointer; padding: .8rem 0; font: 700 1rem/1.5 Arial, sans-serif; }
+.bat-selectable-code summary:focus-visible { outline: 3px solid #b75f49; outline-offset: 3px; }
+</style>
+<marker id="outbox-retry-arrow" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8" fill="#657780"/></marker>
+<marker id="outbox-retry-arrow-accent" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8" fill="#b75f49"/></marker>
+<marker id="outbox-retry-arrow-link" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto"><path d="M 0 0 L 8 4 L 0 8" fill="#657780"/></marker>
+</defs>
+<line x1="72" y1="72" x2="72" y2="344" class="v-boundary"/><line x1="248" y1="72" x2="248" y2="344" class="v-boundary"/><line x1="72" y1="128" x2="248" y2="128" class="v-link" marker-end="url(#outbox-retry-arrow)"/><line x1="72" y1="304" x2="248" y2="304" class="v-link" marker-end="url(#outbox-retry-arrow)"/><rect x="112" y="96" width="96" height="24" rx="4" class="v-mask"/><text x="160" y="112" class="v-label" text-anchor="middle">Publish 101</text><rect x="112" y="272" width="96" height="24" rx="4" class="v-mask"/><text x="160" y="288" class="v-label" text-anchor="middle">Retry 101</text><rect x="24" y="24" width="96" height="48" rx="4" class="v-node"/><text x="72" y="52" class="v-heading" text-anchor="middle">Relay</text><rect x="200" y="24" width="96" height="48" rx="4" class="v-node"/><text x="248" y="52" class="v-heading" text-anchor="middle">Broker</text><rect x="24" y="176" width="272" height="80" rx="4" class="v-focus"/><text x="160" y="204" class="v-heading" text-anchor="middle">Completion not recorded</text><text x="160" y="232" class="v-label" text-anchor="middle">Event 101 stays pending</text><text x="160" y="376" class="v-heading" text-anchor="middle">2 deliveries, same event ID</text>
+</svg>

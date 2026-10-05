@@ -830,5 +830,12 @@ button { font: inherit; }
   .ss-nav { grid-template-columns: 1fr; gap: .75rem; }
   .ss-nav nav { display: flex; justify-content: flex-start; flex-wrap: wrap; gap: .5rem 1rem; }
   .ss-nav nav a { padding: .4rem 0; font-size: .875rem; }
-  .ss-writing > header h2, .ss-blog-hero h1 { font-size: clamp(2.2rem, 8vw, 3.5rem); }
+  .ss-writing > header h2, .ss-blog-hero h1, .ss-blog-section > header h2 { font-size: clamp(2.2rem, 8vw, 3.5rem); }
 }
+
+/* Keep published code, tables, and long headings within the reading column. */
+.article-body pre, .article-body table { max-width: 100%; overflow-x: auto; }
+.article-body table { display: block; }
+.article-title-word { max-width: 100%; overflow-wrap: anywhere; hyphens: auto; }
+.article-body h2, .article-body h3 { overflow-wrap: anywhere; hyphens: auto; }
+.ss-end > div { margin-top: 1rem; }
