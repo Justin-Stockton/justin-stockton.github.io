@@ -1,6 +1,6 @@
 ---
 layout: "article"
-title: "The PHP security updates: what website owners should check"
+title: "The PHP security updates: what you should check"
 description: "What the October 2026 PHP vulnerabilities mean, which releases contain the fixes, and how to confirm your website is patched."
 deck: "What the vulnerabilities mean, which releases contain the fixes, and what to ask your hosting provider."
 topic: "Security"
