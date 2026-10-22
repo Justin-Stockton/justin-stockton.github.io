@@ -115,7 +115,7 @@
     </section>
 
     <section class="ss-writing reveal-section" id="writing">
-      <header><p>Writing</p><h2>Notes from the work.</h2><div>I write about the tools I use, the changes I make, and the decisions behind software.</div></header>
+      <header><p>Writing</p><h2>Notes from my work.</h2><div>I write about the tools I use, the changes I make, and the decisions behind software.</div></header>
       {% assign published_posts = site.posts | where_exp: "post", "post.draft != true" | sort: "publish_order" %}
       <div class="ss-post-list">
         {% for post in published_posts limit: 3 %}
