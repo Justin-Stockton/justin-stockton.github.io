@@ -651,7 +651,8 @@ button { font: inherit; }
 .scrap-story .article-body h2 { margin: 4.5rem 0 1.25rem; padding-left: 1rem; border-left: 6px solid var(--ss-accent); font: 800 2.1rem/1.1 Arial, sans-serif; }
 .scrap-story .article-body > h2:first-child { margin-top: 0; }
 .scrap-story .article-body h3 { margin-top: 3rem; font: 800 1.35rem/1.2 Arial, sans-serif; }
-.scrap-story .article-body blockquote { margin: 3rem -2rem; padding: 1.8rem 2rem; background: var(--ss-note); border: 2px solid; box-shadow: 5px 6px 0; transform: rotate(-.5deg); font-size: 1.25rem; }
+.scrap-story .article-body blockquote { position: relative; isolation: isolate; margin: 3rem -2rem; padding: 1.8rem 2rem; border: 2px solid transparent; font-size: 1.25rem; }
+.scrap-story .article-body blockquote::before { content: ""; position: absolute; inset: -2px; z-index: -1; background: var(--ss-note); border: 2px solid; box-shadow: 5px 6px 0; transform: rotate(-.5deg); pointer-events: none; }
 .scrap-story .article-body a { text-decoration-color: var(--ss-accent); text-decoration-thickness: 2px; }
 .scrap-story .source-note { border-color: var(--ss-accent); }
 .article-note { max-width: 720px; margin: 2.5rem 0; padding: 1.25rem 1.4rem; background: var(--ss-note, #fef3c7); border: 2px solid; box-shadow: 4px 5px 0; font-size: 1rem; line-height: 1.6; }
