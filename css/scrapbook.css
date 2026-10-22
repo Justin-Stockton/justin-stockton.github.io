@@ -418,7 +418,7 @@ button { font: inherit; }
 .ss-chapter-copy blockquote { margin: 2.5rem 0 0; padding-left: 1rem; border-left: 5px solid; font: 500 1.35rem/1.35 Georgia, serif; }
 .ss-work { padding: 6rem 5vw; background: var(--ss-work); border-bottom: 3px solid; }
 .ss-work > h2 { margin: 0 0 3rem; font-size: 3rem; }
-.ss-projects { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.4rem; align-items: start; }
+.ss-projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.4rem; align-items: start; }
 .ss-projects > * { padding: .7rem; background: var(--ss-card); color: inherit; border: 2px solid; box-shadow: 5px 6px 0; text-decoration: none; transition: transform .3s cubic-bezier(.2,.8,.2,1), box-shadow .3s ease; }
 .ss-projects > a:nth-child(1) { transform: rotate(-2deg); }
 .ss-projects > a:nth-child(2) { transform: rotate(1deg); }
@@ -432,7 +432,6 @@ button { font: inherit; }
 .ss-projects > a:hover img { transform: scale(1.045); filter: saturate(1.08); }
 .ss-projects strong, .ss-projects span { display: block; padding: .5rem .4rem 0; }
 .ss-projects span { font-size: .75rem; }
-.ss-projects p { font-family: Georgia, serif; line-height: 1.5; }
 .ss-tools { padding: 6rem 5vw; background: var(--ss-card); border-bottom: 3px solid; }
 .ss-tools > header { max-width: 1000px; margin-bottom: 3rem; }
 .ss-tools > header > p { margin: 0; font-size: .72rem; font-weight: 800; text-transform: uppercase; }
