@@ -1,6 +1,6 @@
 ---
 layout: "article"
-title: "The PHP security flaws that took down the internet: what you should know"
+title: "Critical PHP vulnerabilities: what website owners should check"
 description: "What the October 2026 PHP vulnerabilities mean, which releases contain the fixes, and how to confirm your website is patched."
 deck: "What the vulnerabilities mean, which releases contain the fixes, and what to ask your hosting provider."
 topic: "Security"
@@ -58,6 +58,8 @@ These are the releases named in this advisory, not a permanent list of the lates
 There is also a reason not to judge patch status by the version number alone. Linux distributions and long-term support vendors may backport fixes. That means they apply a security fix to the version they already maintain without adopting the newer upstream version number.
 
 An older-looking version may therefore include the fixes. Ask for the vendor's security notice or package release confirming coverage of both CVEs. "We keep everything updated" is less useful than confirmation about the package actually running your site.
+
+The PHP team gave distributions and long-term support vendors the patches in advance, so many vendor packages should already be available. Not every package source moves at the same pace, though. The volunteer-run Remi repository, which many Red Hat–family servers use for PHP, said on October 21 that it would not have updates that day. If your server gets PHP from a third-party repository, check that repository's status specifically.
 
 PHP 8.1 and older no longer receive regular updates from the PHP project. If you're on one of those branches, ask whether your vendor supplies these fixes and plan a move to a supported version. Don't assume an old installation has coverage.
 
